@@ -37,6 +37,6 @@ https://github.com/reddit-archive/reddit/wiki/json
 ## Extra points
 
 * Typescript
-* eslint and prittier
+* eslint and prittier `:heavy_check_mark:` [standardJS](https://standardjs.com/)
 * Module resolver or similar (for simplify import paths)
 
