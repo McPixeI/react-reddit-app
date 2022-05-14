@@ -1,7 +1,7 @@
 import clsx from 'clsx'
-import Spinner from '../Spinner'
 import PropTypes from 'prop-types'
 import { forwardRef } from 'react'
+import { Spinner } from '../Spinner'
 
 export const Button = forwardRef(
   (
