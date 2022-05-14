@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# React Reddit App
+
+This is a code challenge which uses Reddit API.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Code challenge description
 
-In the project directory, you can run:
+Reddit is a news website in which registered users can submit posts or links
+to content that other users can vote and comment, the total number of votes
+determine the position of the post inside the website, each of these posts are
+grouped into categories known as “subreddits”.
 
-### `npm start`
+This APP should list the posts in the r/pics subreddit.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Create a radio button with four options to get the different sorts:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* New (default): https://api.reddit.com/r/pics/new.json
+* Hot: https://api.reddit.com/r/pics/hot.json
+* Controversial: https://api.reddit.com/r/pics/controversial.json
+* Top: https://api.reddit.com/r/pics/top.json
 
-### `npm test`
+For more information about the JSON structure see:
+https://github.com/reddit-archive/reddit/wiki/json
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+1. Use a list to display a scrollable list of the latest posts in the r/pics subreddit
+2. Each post must show the following data: thumbnail image (if present), title, author, total number of votes (score), number of comments and date of creation (in a relative format ( e.g. “1 day ago” )
+3. Once the user taps on a post, open a new tab with the contents of the post URL
+4. Ability to refresh the posts list
+5. Use redux or Context Api
+6. Unit test
+7. Use the latest release of React or one release before the latest
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Extra points
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Typescript
+* eslint and prittier
+* Module resolver or similar (for simplify import paths)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
