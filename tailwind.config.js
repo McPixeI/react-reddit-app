@@ -5,7 +5,7 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     colors: {
-      primary: '#6366F1',
+      primary: '#0079d3',
       bgdark: '#111827',
       bglight: '#fffff',
       transparent: 'transparent',
@@ -13,8 +13,6 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
-      emerald: colors.emerald,
-      indigo: colors.indigo,
       yellow: colors.yellow,
       red: colors.red
     },

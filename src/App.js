@@ -1,11 +1,10 @@
 import { AppFooter } from './containers/AppFooter/AppFooter'
+import { AppNav } from './containers/AppNav'
 
 function App () {
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>
-        React-reddit
-      </h1>
+      <AppNav />
       <AppFooter />
     </>
   )
