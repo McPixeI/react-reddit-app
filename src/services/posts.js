@@ -5,7 +5,8 @@ export const postsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://api.reddit.com/r/pics/' }),
   endpoints: builder => ({
     getPostsByCategory: builder.query({
-      query: (category) => `${category}.json`
+      query: (category) => `${category}.json`,
+      transformResponse: responseData => responseData.data.children
     })
   })
 })
