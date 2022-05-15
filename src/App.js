@@ -1,12 +1,15 @@
 import { AppNav } from './containers/AppNav'
 import { AppFooter } from './containers/AppFooter/AppFooter'
 import { CategoryFilter } from './containers/CategoryFilter'
+import { AppContainer } from './containers/AppContainer'
 
 function App () {
   return (
     <>
       <AppNav />
-      <CategoryFilter />
+      <AppContainer className='min-h-[80vh]'>
+        <CategoryFilter />
+      </AppContainer>
       <AppFooter />
     </>
   )

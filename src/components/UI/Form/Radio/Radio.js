@@ -1,12 +1,15 @@
+import clsx from 'clsx'
 import PropTypes from 'prop-types'
 
 export const Radio = ({
   value,
   selected,
-  onChange = () => {}
+  onChange = () => {},
+  className
 }) => {
+  const classes = clsx('flex items-center mb-4', className)
   return (
-    <div className='flex items-center mb-4'>
+    <div className={classes}>
       <input
         id={value}
         type='radio'
@@ -29,5 +32,6 @@ Radio.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   selected: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  className: PropTypes.string
 }

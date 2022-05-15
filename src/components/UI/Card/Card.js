@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 function Card ({ children, link, className }) {
   const classes = clsx(
-    'max-w-sm bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700',
+    'p-6 bg-white border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700',
     className
   )
   return (
