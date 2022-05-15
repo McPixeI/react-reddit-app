@@ -25,18 +25,18 @@ https://github.com/reddit-archive/reddit/wiki/json
 
 ## Requirements
 
-1. Use a list to display a scrollable list of the latest posts in the r/pics subreddit
-2. Each post must show the following data: thumbnail image (if present), title, author, total number of votes (score), number of comments and date of creation (in a relative format ( e.g. “1 day ago” )
-3. Once the user taps on a post, open a new tab with the contents of the post URL
-4. Ability to refresh the posts list
-5. Use redux or Context Api
+1. Use a list to display a scrollable list of the latest posts in the r/pics subreddit :heavy_check_mark:
+2. Each post must show the following data: thumbnail image (if present), title, author, total number of votes (score), number of comments and date of creation (in a relative format ( e.g. “1 day ago” ) :heavy_check_mark:
+3. Once the user taps on a post, open a new tab with the contents of the post URL :heavy_check_mark:
+4. Ability to refresh the posts list :heavy_check_mark:
+5. Use redux or Context Api :heavy_check_mark:
 6. Unit test
-7. Use the latest release of React or one release before the latest
+7. Use the latest release of React or one release before the latest :heavy_check_mark:
 
 
 ## Extra points
 
 * Typescript
-* eslint and prittier :heavy_check_mark: [standardJS](https://standardjs.com/)
+* eslint and prittier :heavy_check_mark:
 * Module resolver or similar (for simplify import paths)
 
