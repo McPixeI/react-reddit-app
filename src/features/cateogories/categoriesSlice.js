@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { CATEGORIES } from '../../common/utils/config/categories'
+import { CATEGORIES } from '../../common/utils/constants/categories'
 
 const initialState = {
   value: CATEGORIES.NEW

@@ -2,7 +2,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/solid'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { NAV_ITEMS } from '../../common/utils/config/nav-items'
+import { NAV_ITEMS } from '../../common/utils/constants/nav-items'
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
 
 const AppNavLink = ({ props }) => {

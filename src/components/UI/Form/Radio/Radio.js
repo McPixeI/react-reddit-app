@@ -20,7 +20,7 @@ export const Radio = ({
       />
       <label
         htmlFor={value}
-        className='cursor-pointer block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+        className='cursor-pointer block pl-2 text-sm font-medium text-gray-900 dark:text-gray-300'
       >
         {value}
       </label>

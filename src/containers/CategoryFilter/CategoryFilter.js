@@ -1,6 +1,6 @@
 import { Radio } from '../../components/UI/Form/Radio/Radio'
 import { Card } from '../../components/UI/Card'
-import { CATEGORIES } from '../../common/utils/config/categories'
+import { CATEGORIES } from '../../common/utils/constants/categories'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectCategory } from '../../features/cateogories/categoriesSlice'
 import { useEffect } from 'react'
@@ -9,7 +9,7 @@ export const CategoryFilter = () => {
   const dispatch = useDispatch()
   const selected = useSelector(state => state.categories.value)
 
-  console.log('category: ' + JSON.stringify(selected))
+  /* console.log('category: ' + JSON.stringify(selected))
 
   function fetchPosts (selected) {
     return window.fetch(`https://api.reddit.com/r/pics/${selected}.json`)
@@ -19,7 +19,7 @@ export const CategoryFilter = () => {
 
   useEffect(() => {
     fetchPosts(selected)
-  }, [selected])
+  }, [selected]) */
 
   return (
     <Card>

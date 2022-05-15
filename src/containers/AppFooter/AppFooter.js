@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { NAV_ITEMS } from '../../common/utils/config/nav-items'
+import { NAV_ITEMS } from '../../common/utils/constants/nav-items'
 import { ExtLink } from '../../components/UI/Link/ExtLink'
 
 export const AppFooter = () => {
