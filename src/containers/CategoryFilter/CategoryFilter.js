@@ -1,10 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Radio } from '../../components/UI/Form/Radio/Radio'
 import { Card } from '../../components/UI/Card'
 import { CATEGORIES } from '../../utils/config/categories'
 
 export const CategoryFilter = () => {
   const [selected, setSelected] = useState(CATEGORIES.NEW)
+
+  function fetchPosts (selected) {
+    return window.fetch(`https://api.reddit.com/r/pics/${selected}.json`)
+      .then(response => response.json())
+      .then(json => console.log(json))
+  }
+
+  useEffect(() => {
+    fetchPosts(selected)
+  }, [selected])
 
   return (
     <Card>
