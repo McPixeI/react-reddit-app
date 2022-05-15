@@ -13,6 +13,7 @@ export const CategoryFilter = () => {
     <Card className='mb-8'>
       <CardBody>
         <div className='flex items-cente'>
+          <p className='font-medium'>Filter by:</p>
           {Object.keys(CATEGORIES)
             .map(category =>
               <Radio

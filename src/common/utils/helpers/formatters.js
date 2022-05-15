@@ -21,3 +21,12 @@ export const relativeDateFormatter = (value) => {
   }
   return ''
 }
+
+export const dateTimeFormatter = (value) => {
+  const formatter = new Intl.DateTimeFormat('en', {
+    dateStyle: 'short',
+    timeStyle: 'short',
+    hour12: true
+  })
+  return formatter.format(value)
+}

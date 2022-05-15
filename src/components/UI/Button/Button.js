@@ -18,13 +18,13 @@ export const Button = forwardRef(
     ref
   ) => {
     const classes = clsx(
-      'inline-block text-lg rounded-sm focus:outline-none focus:ring focus:ring-opacity-50 disabled:opacity-50',
+      'inline-flex items-center justify-center text-lg rounded-sm focus:outline-none focus:ring focus:ring-opacity-50 disabled:opacity-50',
       'transition duration-300 ease-in-out',
       { 'h-8 px-4': size === 'sm' },
       { 'h-10 px-5': size === 'md' },
       { 'h-12 px-6': size === 'lg' },
       {
-        'text-white bg-indigo-500 hover:bg-indigo-600 ring-indigo-200':
+        'text-white bg-primary hover:bg-primary/80 ring-indigo-200':
           variant === 'primary'
       },
       {

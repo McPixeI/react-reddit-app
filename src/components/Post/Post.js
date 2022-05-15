@@ -31,7 +31,7 @@ export const Post = ({ props }) => {
         <CardBody className='w-full'>
           <div className='flex flex-col justify-between mb-2 md:flex-row '>
             <div className='flex text-sm items-center mb-2 md:m-0'>
-              <h2>Published by {author}</h2>
+              <h2>Published by <strong>{author}</strong></h2>
             </div>
             <div className='flex'>
               <div className='flex mr-4'>
