@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const postsApi = createApi({
   reducerPath: 'postsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://api.reddit.com/r/pics/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_API_BASE_PATH }),
   endpoints: builder => ({
     getPostsByCategory: builder.query({
       query: (category) => `${category}.json`,

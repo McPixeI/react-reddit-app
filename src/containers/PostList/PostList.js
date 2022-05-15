@@ -8,7 +8,7 @@ export const PostList = () => {
   const { data, error, isLoading, isFetching } = useGetPostsByCategoryQuery(category)
 
   return (
-    <>
+    <div>
       {error
         ? (
           <p>Oh no, there was an error</p>
@@ -18,6 +18,6 @@ export const PostList = () => {
           : data
             ? data.map((post, i) => <Post key={i} props={post.data} />)
             : null}
-    </>
+    </div>
   )
 }
