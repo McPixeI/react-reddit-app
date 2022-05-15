@@ -7,7 +7,7 @@ export const Radio = ({
   onChange = () => {},
   className
 }) => {
-  const classes = clsx('flex items-center mb-4', className)
+  const classes = clsx('flex items-center', className)
   return (
     <div className={classes}>
       <input
