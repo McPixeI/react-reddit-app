@@ -15,24 +15,27 @@ export const Post = ({ props }) => {
     num_comments: numComments,
     score,
     title,
-    permalink
+    id
   } = props
 
-  // process.env.REACT_APP_REDDIT_HOSTNAME}${permalink}
+  /* eslint-disable react/jsx-indent */
   return (
     <Link
-      to='/post'
-      state={{ src: permalink }}
+      to={`/post/${id}`}
       target='_blank'
-      rel='noopener noreferrer'
     >
       <Card className='mb-4 hover:bg-gray-100 dark:hover:bg-gray-700'>
         <CardHeading className='aspect-auto overflow-hidden relative'>
-          {thumbnail && thumbnail !== 'nsfw'
-            ? <Image
-                className='object-cover w-full rounded-t-md md:h-auto md:w-80 md:rounded-none md:rounded-l-md'
-                src={thumbnail}
-              />
+          {thumbnail
+            ? thumbnail !== 'nsfw'
+                ? <Image
+                    className='object-cover w-full rounded-t-md md:h-auto md:w-80 md:rounded-none md:rounded-l-md'
+                    src={thumbnail}
+                  />
+                : <>
+                  <PhotographIcon className='w-full text-gray-400' />
+                  <span className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-black text-2xl'>NSFW</span>
+                  </>
             : <PhotographIcon className='w-full text-gray-400' />}
         </CardHeading>
         <CardBody className='w-full'>

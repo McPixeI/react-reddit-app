@@ -1,10 +1,10 @@
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
+import fallbackImg from '../../../assets/img/notFoundImg.jpg'
 
 export const Image = ({
   src,
   alt,
-  fallback,
   className,
   ...rest
 }) => {
@@ -12,10 +12,8 @@ export const Image = ({
 
   const handleError = (evt) => {
     const target = evt.currentTarget
-    if (fallback) {
-      target.src = fallback
-    }
-    target.alt = ''
+    target.src = fallbackImg || ''
+    target.alt = 'fallback'
   }
 
   return (
@@ -32,6 +30,5 @@ export const Image = ({
 Image.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
-  fallback: PropTypes.string,
   className: PropTypes.string
 }

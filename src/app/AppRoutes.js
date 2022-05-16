@@ -7,7 +7,7 @@ export default function AppRoutes () {
   return (
     <Routes>
       <Route path='/' element={<HomePage />} />
-      <Route path='/post' element={<PostPage />} />
+      <Route path='/post/:id' element={<PostPage />} />
       <Route path='*' element={<NotFoundPage />} />
     </Routes>
   )

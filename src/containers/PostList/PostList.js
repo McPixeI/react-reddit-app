@@ -14,7 +14,7 @@ export const PostList = () => {
 
   const lastUpdate = new Date(startedTimeStamp) || null
 
-  if (error) return <p role='alert'>Sorry, there was an error. Try refreshing the page</p>
+  if (error) return <p role='alert' className='text-center mt-10'>There was an error retrieving the data.Please, try refreshing the page</p>
 
   /* eslint-disable react/jsx-closing-tag-location */
   return (
