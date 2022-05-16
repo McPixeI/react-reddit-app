@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
-import fallbackImg from '../../../assets/img/notFoundImg.jpg'
+import fallbackImg from '../../../assets/img/fallbackImg.jpg'
 
 export const Image = ({
   src,
