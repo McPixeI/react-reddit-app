@@ -12,12 +12,12 @@ const setup = () => {
 }
 
 describe('Toggle', () => {
-  it('Toggle | Should render without crashing', () => {
+  it('Should render without crashing', () => {
     const { toggle } = setup()
     expect(toggle).toBeInTheDocument()
   })
 
-  it('Toggle | Should be checked and unchecked on user click', () => {
+  it('Should change checked state on user click', () => {
     const { toggle } = setup()
     const toggleInput = screen.getByRole('checkbox')
     expect(toggleInput).toHaveProperty('checked', false)
