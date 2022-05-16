@@ -24,7 +24,7 @@ export const Post = ({ props }) => {
       to={`/post/${id}`}
       target='_blank'
     >
-      <Card className='mb-4 hover:bg-gray-100 dark:hover:bg-gray-700'>
+      <Card role='article' className='mb-4 hover:bg-gray-100 dark:hover:bg-gray-700'>
         <CardHeading className='aspect-auto overflow-hidden relative'>
           {thumbnail
             ? thumbnail !== 'nsfw'
@@ -41,16 +41,16 @@ export const Post = ({ props }) => {
         <CardBody className='w-full'>
           <div className='flex flex-col justify-between mb-2 md:flex-row '>
             <div className='flex text-sm items-center mb-2 md:m-0'>
-              <h2>Published by <strong>{author}</strong></h2>
+              <h2 aria-level='2'>Published by {author}</h2>
             </div>
             <div className='flex'>
               <div className='flex mr-4'>
                 <ClockIcon className='h-5 w-5 mt-0.5 mr-0.5' />
-                <time className='mr-4'>
+                <time role='timer' className='mr-4'>
                   {relativeDateFormatter(created)}
                 </time>
                 <ChatAlt2Icon className='h-5 w-5 mt-0.5 mr-0.5' />
-                {numComments}
+                <span role='contentinfo'>{numComments}</span>
               </div>
               <Badge>{scoreFormatter(score)}<StarIcon className='w-4 h-4 mt-0.5 ml-1' /></Badge>
             </div>
