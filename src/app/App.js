@@ -1,16 +1,18 @@
 import { AppNav } from '../containers/AppNav'
 import { AppFooter } from '../containers/AppFooter/AppFooter'
-import { CategoryFilter } from '../containers/CategoryFilter'
 import { AppContainer } from '../containers/AppContainer'
-import { PostList } from '../containers/PostList/PostList'
+import AppRoutes from './AppRoutes'
+import { ErrorBoundary } from 'react-error-boundary'
+import { ErrorFallback } from '../common/utils/errorBoundaries/ErrorFallback'
 
 function App () {
   return (
     <>
       <AppNav />
-      <AppContainer className='min-h-[80vh]'>
-        <CategoryFilter />
-        <PostList />
+      <AppContainer>
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <AppRoutes />
+        </ErrorBoundary>
       </AppContainer>
       <AppFooter />
     </>

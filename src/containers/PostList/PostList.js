@@ -11,14 +11,11 @@ import clsx from 'clsx'
 export const PostList = () => {
   const category = useSelector(state => state.categories.value)
   const { data, error, isLoading, isFetching, refetch, startedTimeStamp } = useGetPostsByCategoryQuery(category)
-  const [lastUpdate, setLastUpdate] = useState(null)
   const refreshClasses = clsx('w-5 h-5 mr-1', { 'animate-spin': isFetching || isLoading })
 
-  useEffect(() => {
-    setLastUpdate(new Date(startedTimeStamp))
-  }, [startedTimeStamp])
+  const lastUpdate = new Date(startedTimeStamp) || null
 
-  if (error) return <p>Sorry, there was an error. Try refreshing the page</p>
+  if (error) return <p role='alert'>Sorry, there was an error. Try refreshing the page</p>
 
   /* eslint-disable react/jsx-closing-tag-location */
   return (

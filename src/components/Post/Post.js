@@ -5,6 +5,7 @@ import { CardBody, CardHeading } from '../UI/Card/Card'
 import { ChatAlt2Icon, PhotographIcon, ClockIcon } from '@heroicons/react/outline'
 import { StarIcon } from '@heroicons/react/solid'
 import { relativeDateFormatter, scoreFormatter } from '../../common/utils/helpers/formatters'
+import { Link } from 'react-router-dom'
 
 export const Post = ({ props }) => {
   const {
@@ -17,8 +18,14 @@ export const Post = ({ props }) => {
     permalink
   } = props
 
+  // process.env.REACT_APP_REDDIT_HOSTNAME}${permalink}
   return (
-    <a href={`${process.env.REACT_APP_REDDIT_HOSTNAME}${permalink}`} target='_blank' rel='noopener noreferrer'>
+    <Link
+      to='/post'
+      state={{ src: permalink }}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
       <Card className='mb-4 hover:bg-gray-100 dark:hover:bg-gray-700'>
         <CardHeading className='aspect-auto overflow-hidden relative'>
           {thumbnail && thumbnail !== 'nsfw'
@@ -48,6 +55,6 @@ export const Post = ({ props }) => {
           <h3 className='mb-2 max-w-xl text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>{title}</h3>
         </CardBody>
       </Card>
-    </a>
+    </Link>
   )
 }
