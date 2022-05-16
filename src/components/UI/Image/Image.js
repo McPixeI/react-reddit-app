@@ -4,7 +4,7 @@ import fallbackImg from '../../../assets/img/notFoundImg.jpg'
 
 export const Image = ({
   src,
-  alt,
+  alt = '',
   className,
   ...rest
 }) => {
