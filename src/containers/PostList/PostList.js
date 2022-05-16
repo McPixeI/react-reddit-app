@@ -33,7 +33,7 @@ export const PostList = () => {
       {isFetching || isLoading
         ? <PostListSkeleton />
         : data
-          ? data.map((post, i) => <Post key={i} props={post.data} />)
+          ? data.map((post, i) => <Post key={post.data.id} props={post.data} />)
           : null}
     </>
   )

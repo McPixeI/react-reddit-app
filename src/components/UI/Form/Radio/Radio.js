@@ -8,6 +8,7 @@ export const Radio = ({
   className
 }) => {
   const classes = clsx('flex items-center', className)
+
   return (
     <div className={classes}>
       <input
@@ -29,7 +30,6 @@ export const Radio = ({
 }
 
 Radio.propTypes = {
-  name: PropTypes.string,
   value: PropTypes.string,
   selected: PropTypes.string,
   onChange: PropTypes.func,

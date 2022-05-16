@@ -18,7 +18,6 @@ export const CategoryFilter = () => {
             .map(category =>
               <Radio
                 key={category}
-                name='category'
                 value={CATEGORIES[category]}
                 selected={selected}
                 onChange={evt => dispatch(selectCategory(evt.target.value))}
