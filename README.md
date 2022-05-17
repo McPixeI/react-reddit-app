@@ -69,6 +69,9 @@ https://github.com/reddit-archive/reddit/wiki/json
 * The rest of relevant tests are under __test__ folder
 * There are tests for redux, server mocking, router, components, and the relevant containers in the page (`PostList and CategoryFilter`)
 
+### About file exports
+* I didn't use any module resolver because I'm confortable and used to use the `index.js` export aproach of the "real" file in the same folder to simplify a bit component exports
+
 ### Language
 
 * I choosed JS over TS because there was a limited time on the challenge and I feel a lot more confortable with it.
