@@ -1,9 +1,9 @@
-import { render, screen } from '../common/utils/test/test-utils'
+import { renderWithProviders, screen } from '../common/utils/test/test-utils'
 import { fireEvent } from '@testing-library/react'
 import { CategoryFilter } from '../containers/CategoryFilter'
 
 const setup = () => {
-  const utils = render(<CategoryFilter />)
+  const utils = renderWithProviders(<CategoryFilter />)
   const newRadio = screen.getByRole('radio', { name: /new/i })
   const hotRadio = screen.getByRole('radio', { name: /hot/i })
   const controversialRadio = screen.getByRole('radio', { name: /controversial/i })

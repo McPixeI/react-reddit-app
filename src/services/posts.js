@@ -3,7 +3,7 @@ import { API_BASE_PATH, REDDIT_HOSTNAME } from '../common/utils/constants/api'
 
 export const postsApi = createApi({
   reducerPath: 'postsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: '/' }),
+  baseQuery: fetchBaseQuery(),
   endpoints: builder => ({
     getPostsByCategory: builder.query({
       query: (category) => `${API_BASE_PATH}${category}.json`,

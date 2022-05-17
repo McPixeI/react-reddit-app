@@ -4,7 +4,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import categoriesReducer from '../../../features/cateogories/categoriesSlice'
 import { AppProviders } from '../../../app/AppProviders'
 
-function render (
+function renderWithProviders (
   ui,
   {
     preloadedState,
@@ -26,4 +26,4 @@ const waitForLoadingToFinish = () =>
 
 /* eslint-disable import/export */
 export * from '@testing-library/react'
-export { render, waitForLoadingToFinish }
+export { renderWithProviders, waitForLoadingToFinish }
