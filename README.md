@@ -1,8 +1,24 @@
-# React Reddit App
+<div>
+  <h1 align="center"><a href="https://astounding-moxie-edc0e9.netlify.app/"> React Reddit App Demo</a></h1>
+  <strong>
+    Description
+  </strong>
+  <p>
+    This is a code challenge which uses Reddit API.
+  </p>
+  <p>
+    This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  </p>
+  <a href="https://astounding-moxie-edc0e9.netlify.app/">
+    <img
+      alt="app screenshot"
+      src="https://astounding-moxie-edc0e9.netlify.app/preview.jpg"
+    />
+  </a>
+</div>
 
-This is a code challenge which uses Reddit API.
+<hr />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Code challenge description
 
@@ -55,6 +71,7 @@ https://github.com/reddit-archive/reddit/wiki/json
 
 ## Extra features (not demanded by the challenge):
 
+* Added "NSFW" preview on Post List for protection
 * Dark/light mode
 * Custom UI components made with Tailwind
 * Usage of skeletons aproach for loading states
@@ -63,6 +80,8 @@ https://github.com/reddit-archive/reddit/wiki/json
 ## Some notes
 
 ### Tests
+
+<img alt="tests" src="https://astounding-moxie-edc0e9.netlify.app/tests.jpg"/>
 
 * There are 32 passing tests
 * Test components are on the same folder as the owner component in /components folder
