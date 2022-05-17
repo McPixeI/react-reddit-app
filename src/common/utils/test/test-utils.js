@@ -18,8 +18,8 @@ function render (
 const waitForLoadingToFinish = () =>
   waitForElementToBeRemoved(
     () => [
-      ...screen.queryAllByLabelText(/loading/i),
-      ...screen.queryAllByText(/loading/i)
+      ...screen.getByRole('status'),
+      ...screen.queryAllByText('status')
     ],
     { timeout: 4000 }
   )
