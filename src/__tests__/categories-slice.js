@@ -2,13 +2,13 @@ import { CATEGORIES } from '../common/utils/constants/categories'
 import reducer, { selectCategory } from '../features/cateogories/categoriesSlice'
 
 describe('Categories Slice', () => {
-  test('Should return the initial state', () => {
+  it('Should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual({
       value: CATEGORIES.NEW
     })
   })
 
-  test('Should handle category change', () => {
+  it('Should handle category change', () => {
     expect(reducer(undefined, {})).toEqual({
       value: CATEGORIES.NEW
     })

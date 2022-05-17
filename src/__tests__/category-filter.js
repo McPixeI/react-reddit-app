@@ -18,7 +18,7 @@ const setup = () => {
 }
 
 describe('Category filter', () => {
-  test('Should render all radio categories', () => {
+  it('Should render all radio categories', () => {
     const { newRadio, hotRadio, controversialRadio, topRadio } = setup()
     expect(newRadio).toBeInTheDocument()
     expect(hotRadio).toBeInTheDocument()
@@ -26,7 +26,7 @@ describe('Category filter', () => {
     expect(topRadio).toBeInTheDocument()
   })
 
-  test('Should have NEW as default checked radio', () => {
+  it('Should have NEW as default checked radio', () => {
     const { newRadio, hotRadio, controversialRadio, topRadio } = setup()
     expect(newRadio).toBeChecked()
     expect(hotRadio).not.toBeChecked()
@@ -34,7 +34,7 @@ describe('Category filter', () => {
     expect(topRadio).not.toBeChecked()
   })
 
-  test('Should update checked attributes on click radio', () => {
+  it('Should update checked attributes on click radio', () => {
     const { newRadio, hotRadio, controversialRadio, topRadio } = setup()
     expect(newRadio).toBeChecked()
     expect(hotRadio).not.toBeChecked()

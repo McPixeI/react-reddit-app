@@ -26,7 +26,7 @@ export const PostList = () => {
         {lastUpdate && !isFetching && !isLoading
           ? <div>
             <p className='text-sm font-medium'>/{category}</p>
-            <p className='text-sm'>last updated at {dateTimeFormatter(lastUpdate)}</p>
+            <p className='text-sm'>last updated at <span data-testid='update-date'>{dateTimeFormatter(lastUpdate)}</span></p>
           </div>
           : null}
       </div>
@@ -34,7 +34,7 @@ export const PostList = () => {
         ? <PostListSkeleton />
         : data
           ? data.map((post, i) => <Post key={post.data.id} props={post.data} />)
-          : null}
+          : <p role='alert'>There is no data</p>}
     </>
   )
 }
