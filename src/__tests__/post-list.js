@@ -5,6 +5,7 @@ import { rest } from 'msw'
 import { server } from '../common/utils/test/server'
 import { fakePost } from '../common/utils/test/fake'
 import { dateTimeFormatter } from '../common/utils/helpers/formatters'
+import { API_BASE_PATH } from '../common/utils/constants/api'
 
 const setup = () => {
   const utils = renderWithProviders(<PostList />)
@@ -51,7 +52,7 @@ describe('Post List', () => {
   it('Handles error response', async () => {
     server.use(
       rest.get(
-        'https://api.reddit.com/r/pics/new.json',
+        `${API_BASE_PATH}new.json`,
         (req, res, ctx) => res(ctx.status(500))
 
       )

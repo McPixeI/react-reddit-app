@@ -1,8 +1,9 @@
 import { rest } from 'msw'
+import { API_BASE_PATH } from '../../constants/api'
 import { fakePost } from '../fake'
 
 const handlers = [
-  rest.get('https://api.reddit.com/r/pics/new.json', (req, res, ctx) => {
+  rest.get(`${API_BASE_PATH}new.json`, (req, res, ctx) => {
     const mockApiResponse = {
       data: {
         children: [
