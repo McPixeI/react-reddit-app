@@ -6,11 +6,9 @@
   <p>
     This is a code challenge which uses Reddit API.
   </p>
-  <p>
-    This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-  </p>
-  <a href="https://astounding-moxie-edc0e9.netlify.app/">
+  <a style='display:block;text-align:center' href="https://astounding-moxie-edc0e9.netlify.app/">
     <img
+        style='margin:0 auto;'
       alt="app screenshot"
       src="https://astounding-moxie-edc0e9.netlify.app/preview.jpg"
     />
