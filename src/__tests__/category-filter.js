@@ -34,7 +34,7 @@ describe('Category filter', () => {
     expect(topRadio).not.toBeChecked()
   })
 
-  test('Should update checked state on click radio', () => {
+  test('Should update checked attributes on click radio', () => {
     const { newRadio, hotRadio, controversialRadio, topRadio } = setup()
     expect(newRadio).toBeChecked()
     expect(hotRadio).not.toBeChecked()

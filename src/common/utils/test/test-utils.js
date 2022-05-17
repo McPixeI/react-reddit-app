@@ -1,9 +1,8 @@
 // test-utils.jsx
-import React from 'react'
-import { render as rtlRender } from '@testing-library/react'
+import { render as rtlRender, screen, waitForElementToBeRemoved } from '@testing-library/react'
 import { configureStore } from '@reduxjs/toolkit'
-import { Provider } from 'react-redux'
 import categoriesReducer from '../../../features/cateogories/categoriesSlice'
+import { AppProviders } from '../../../app/AppProviders'
 
 function render (
   ui,
@@ -13,12 +12,18 @@ function render (
     ...renderOptions
   } = {}
 ) {
-  function Wrapper ({ children }) {
-    return <Provider store={store}>{children}</Provider>
-  }
-  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
+  return rtlRender(ui, { wrapper: AppProviders, ...renderOptions })
 }
+
+const waitForLoadingToFinish = () =>
+  waitForElementToBeRemoved(
+    () => [
+      ...screen.queryAllByLabelText(/loading/i),
+      ...screen.queryAllByText(/loading/i)
+    ],
+    { timeout: 4000 }
+  )
 
 /* eslint-disable import/export */
 export * from '@testing-library/react'
-export { render }
+export { render, waitForLoadingToFinish }

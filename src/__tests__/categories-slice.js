@@ -9,7 +9,10 @@ describe('Categories Slice', () => {
   })
 
   test('Should handle category change', () => {
-    const previousState = []
+    expect(reducer(undefined, {})).toEqual({
+      value: CATEGORIES.NEW
+    })
+    const previousState = { value: CATEGORIES.NEW }
     expect(reducer(previousState, selectCategory(CATEGORIES.HOT))).toEqual({
       value: CATEGORIES.HOT
     })
