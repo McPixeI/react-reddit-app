@@ -12,7 +12,7 @@ export const CategoryFilter = () => {
   return (
     <Card className='mb-8'>
       <CardBody>
-        <div className='flex items-cente'>
+        <div className='flex flex-col items-left md:flex-row md:items-center'>
           <p className='font-medium'>Filter by:</p>
           {Object.keys(CATEGORIES)
             .map(category =>
@@ -21,7 +21,7 @@ export const CategoryFilter = () => {
                 value={CATEGORIES[category]}
                 selected={selected}
                 onChange={evt => dispatch(selectCategory(evt.target.value))}
-                className='ml-10 first:ml-0'
+                className='my-3 md:ml-10 md:my-0 md:first:ml-0'
               />
             )}
         </div>
