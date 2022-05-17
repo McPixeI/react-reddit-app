@@ -41,7 +41,6 @@ export const PostPage = () => {
               <Badge>{scoreFormatter(data.score)}<StarIcon className='w-4 h-4 mt-0.5 ml-1' /></Badge>
             </div>
           </div>
-          {console.log('data: ' + JSON.stringify(data))}
         </CardBody>
       </Card>
       : null
