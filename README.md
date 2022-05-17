@@ -66,8 +66,8 @@ https://github.com/reddit-archive/reddit/wiki/json
 
 * There are 32 passing tests
 * Test components are on the same folder as the owner component in /components folder
-* The rest of relevant tests are under __test__ folder
-* There are tests for redux, server mocking, router, components, and the relevant containers in the page (`PostList and CategoryFilter`)
+* The rest of relevant tests are under `__test__` folder
+* There are tests for redux, server mocking, router, components, and the relevant containers in the page (`PostList` and `CategoryFilter`)
 
 ### About file exports
 * I didn't use any module resolver because I'm confortable and used to use the `index.js` export aproach of the "real" file in the same folder to simplify a bit component exports
@@ -93,7 +93,7 @@ Clone and install the dependencies for `react-reddit-app`:
 
 ## Setup and running the app
 
-1. Take a copy of .env.local.example and re-name to .env.local
+1. Take a copy of .env.example and re-name to .env.local
 2. Start the project using `npm run start` or `npm start`
 
 ## Author
