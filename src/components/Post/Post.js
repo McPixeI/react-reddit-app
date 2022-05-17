@@ -45,10 +45,13 @@ export const Post = ({ props }) => {
             </div>
             <div className='flex'>
               <div className='flex mr-4'>
-                <ClockIcon className='h-5 w-5 mt-0.5 mr-0.5' />
+              {created
+                ? <><ClockIcon className='h-5 w-5 mt-0.5 mr-0.5' />
                 <time role='timer' className='mr-4'>
                   {relativeDateFormatter(created)}
                 </time>
+                  </>
+                : null}
                 <ChatAlt2Icon className='h-5 w-5 mt-0.5 mr-0.5' />
                 <span role='contentinfo'>{numComments}</span>
               </div>

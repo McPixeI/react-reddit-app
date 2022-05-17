@@ -17,10 +17,7 @@ function renderWithProviders (
 
 const waitForLoadingToFinish = () =>
   waitForElementToBeRemoved(
-    () => [
-      ...screen.getByRole('status'),
-      ...screen.queryAllByText('status')
-    ],
+    () => screen.getByRole('status'),
     { timeout: 4000 }
   )
 

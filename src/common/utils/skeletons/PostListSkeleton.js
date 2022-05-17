@@ -6,6 +6,8 @@ export const PostListSkeleton = ({ num = 6 }) => {
   }))
 
   return (
-    skeletons.map(skeleton => <PostSkeleton key={skeleton.id} />)
+    <div role='status'>
+      {skeletons.map(skeleton => <PostSkeleton key={skeleton.id} />)}
+    </div>
   )
 }

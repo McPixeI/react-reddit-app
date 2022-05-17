@@ -5,20 +5,12 @@ import { Post } from './Post'
 import { MemoryRouter, Router } from 'react-router-dom'
 import userEvent from '@testing-library/user-event'
 import { createMemoryHistory } from 'history'
-
-const fakeData = {
-  author: 'Samuel',
-  created: new Date(2022, 2, 17).getTime(),
-  num_comments: 10,
-  score: '2500',
-  title: 'Title test',
-  id: '1'
-}
+import { fakePost } from '../../common/utils/test/fake'
 
 describe('Post', () => {
   it('Should render a Post with author, title, date, comments-count and score', () => {
     render(
-      <Post props={fakeData} />,
+      <Post props={fakePost} />,
       { wrapper: MemoryRouter }
     )
 
@@ -37,11 +29,11 @@ describe('Post', () => {
 
   it('Should navigate on click to post details', async () => {
     const history = createMemoryHistory()
-    const route = `/post/${fakeData.id}`
+    const route = `/post/${fakePost.id}`
     history.push(route)
     render(
       <Router location={history.location} navigator={history}>
-        <Post props={fakeData} />
+        <Post props={fakePost} />
       </Router>
     )
     const post = screen.getByRole('article')
